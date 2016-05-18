@@ -1,6 +1,6 @@
 PROMPT='$(prompt_user_host)%F{blue}%~%f $(git_prompt_status)$(git_prompt_info)%(?.%F{magenta}.%F{red})❯%f '
 
-prompt_user_host() {
+function prompt_user_host() {
   if [[ -n $SSH_CONNECTION ]]; then
     me="%n@%m"
   elif [[ $LOGNAME != $USER ]]; then
@@ -12,10 +12,8 @@ prompt_user_host() {
 }
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%B%F{grey}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%f%b"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %F{red}✗ %f"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%f%b "
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{grey}◒ %f"
-ZSH_THEME_GIT_PROMPT_CLEAN=" "
 ZSH_THEME_GIT_PROMPT_ADDED="%F{cyan}✓ %f"
 ZSH_THEME_GIT_PROMPT_MODIFIED="%F{yellow}⚑ %f"
 ZSH_THEME_GIT_PROMPT_DELETED="%F{red}✖ %f"
