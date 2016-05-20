@@ -12,6 +12,19 @@ Clone this repo and append next line to your `.zshrc`:
 source neat/neat.zsh
 ```
 
+## Git
+
+Prompt git indicators:
+
+* `⋯` — untracked files
+* `✓` — files added
+* `⚑` — modified files
+* `✖` — deleted files
+* `➜` — renamed files
+* `‼` — unmerged files
+* `↑` — repo is ahead of current branch
+* `↓` — repo is behind
+
 ## License
 
 MIT
