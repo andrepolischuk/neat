@@ -16,10 +16,12 @@ function prompt_battery_status() {
   if [[ `uname` == 'Linux' ]]; then
     current_charge=$(cat /proc/acpi/battery/BAT1/state | grep 'remaining capacity' | awk '{print $3}')
     total_charge=$(cat /proc/acpi/battery/BAT1/info | grep 'last full capacity' | awk '{print $4}')
+    is_charging=$(cat /proc/acpi/battery/BAT1/state | grep 'charging state.*charging')
   else
     battery_info=`ioreg -rc AppleSmartBattery`
     current_charge=$(echo $battery_info | grep -o '"CurrentCapacity" = [0-9]\+' | awk '{print $3}')
     total_charge=$(echo $battery_info | grep -o '"MaxCapacity" = [0-9]\+' | awk '{print $3}')
+    is_charging=$(echo $battery_info | grep -o '"IsCharging" = Yes')
   fi
 
   charged_percentage=$(echo "(($current_charge/$total_charge)*100)" | bc -l | cut -d '.' -f 1)
@@ -28,7 +30,9 @@ function prompt_battery_status() {
     charged_percentage=100
   fi
   if [[ $charged_percentage -lt 25 ]]; then
-    echo "%F{red}⚡%f"
+    if [ -z $is_charging ]; then
+      echo "%F{red}⚡%f"
+    fi
   fi
 }
 
