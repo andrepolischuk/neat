@@ -14,9 +14,9 @@ source neat/neat.zsh
 
 ## Indicators
 
-Prompt git indicators:
+Prompt git and other indicators:
 
-* `⋯` — untracked files
+* `⋯` — untracked files in repo
 * `✓` — files added
 * `⚑` — modified files
 * `✖` — deleted files
@@ -24,8 +24,7 @@ Prompt git indicators:
 * `‼` — unmerged files
 * `↑` — repo is ahead of current branch
 * `↓` — repo is behind
-
-Discharged battery indicator — `⚡`
+* `⚡` — discharged battery indicator
 
 ## License
 
