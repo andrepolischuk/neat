@@ -12,7 +12,7 @@ Clone this repo and append next line to your `.zshrc`:
 source neat/neat.zsh
 ```
 
-## Git
+## Indicators
 
 Prompt git indicators:
 
@@ -24,6 +24,8 @@ Prompt git indicators:
 * `‼` — unmerged files
 * `↑` — repo is ahead of current branch
 * `↓` — repo is behind
+
+Discharged battery indicator — `⚡`
 
 ## License
 
