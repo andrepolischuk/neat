@@ -1,3 +1,6 @@
+# Prompt symbol
+NEAT_PROMPT_SYMBOL="❯"
+
 # Git status symbols
 ZSH_THEME_GIT_PROMPT_PREFIX="%B%F{grey}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%f%b "
@@ -43,7 +46,7 @@ neat_git_status() {
 
 # Prompt symbol
 neat_return_status() {
-  echo -n "%(?.%F{yellow}.%F{red})❯%f "
+  echo -n "%(?.%F{yellow}.%F{red})$NEAT_PROMPT_SYMBOL%f "
 }
 
 # Battery status
@@ -77,3 +80,6 @@ PROMPT='$(neat_host)$(neat_current_dir)$(neat_git_status)$(neat_return_status)'
 
 # Compose right prompt
 RPROMPT='$(neat_battery_status)'
+
+# Compose interactive prompt
+PS2='%F{yellow}$NEAT_PROMPT_SYMBOL%f '
