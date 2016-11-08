@@ -1,12 +1,12 @@
 {
   "name": "neat-prompt",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Minimal zsh prompt",
   "files": [
     "neat.zsh"
   ],
   "scripts": {
-    "postinstall" : "dest=$HOME/.oh-my-zsh/custom/plugins/neat; mkdir -p $dest && ln -sf $PWD/neat.zsh $dest/neat.plugin.zsh"
+    "postinstall": "dest=$HOME/.oh-my-zsh/custom/plugins/neat; mkdir -p $dest && ln -sf $PWD/neat.zsh $dest/neat.plugin.zsh"
   },
   "repository": {
     "type": "git",
