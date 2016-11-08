@@ -6,7 +6,17 @@
 
 ## Install
 
-Clone this repo and append next line to your `.zshrc`:
+```sh
+npm install -g neat-prompt
+```
+
+And add `neat` to plugin list in your `.zshrc`:
+
+```zsh
+plugins=(neat)
+```
+
+Or clone this repo and append next line to your `.zshrc`:
 
 ```zsh
 source neat/neat.zsh

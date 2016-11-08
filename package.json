@@ -1,0 +1,30 @@
+{
+  "name": "neat-prompt",
+  "version": "0.0.0",
+  "description": "Minimal zsh prompt",
+  "files": [
+    "neat.zsh"
+  ],
+  "scripts": {
+    "postinstall" : "dest=$HOME/.oh-my-zsh/custom/plugins/neat; mkdir -p $dest && ln -sf $PWD/neat.zsh $dest/neat.plugin.zsh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrepolischuk/neat.git"
+  },
+  "keywords": [
+    "zsh",
+    "sh",
+    "shell",
+    "bash",
+    "prompt",
+    "theme",
+    "minimal"
+  ],
+  "author": "Andrey Polischuk <andre.polischuk@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrepolischuk/neat/issues"
+  },
+  "homepage": "https://github.com/andrepolischuk/neat"
+}
